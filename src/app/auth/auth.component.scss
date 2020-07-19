@@ -12,28 +12,50 @@ $test: 1px solid red;
   display: flex;
 }
 
-//p {
-//  color: #e5e5e5;
-//  margin-top: 0;
-//}
+@media all and (orientation: landscape) and (max-width: 823px) {
+  .container {
+    height: 100%;
+  }
+
+  .login-card {
+   margin-top: 45px !important;
+   margin-bottom: 45px !important;
+  }
+
+  .wrapper h4 {
+    padding: 5px;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 823px) {
+  .container {
+    height: 100vh;
+  }
+
+  .login-card {
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .wrapper h4 {
+    padding: 5px;
+  }
+}
 
 .login-card {
   display: flex;
   flex-direction: column;
   margin: auto;
   width: 35%;
-  //height: 380px;
   border: 1px solid #c5c5c5;
   background-color: rgba(#e5e5e5, 0.7);
-  //opacity: 0.5;
-
 }
 
 .wrapper {
   width: 80%;
   margin: auto;
-  //opacity: 1;
 }
+
 h4 {
   padding: 32px;
   text-align: center;
@@ -46,7 +68,9 @@ form {
   flex-direction: column;
   border: none;
   margin-top: 15px;
-  //opacity: 1;
+}
+form label {
+  letter-spacing: 1px;
 }
 
 fieldset {
@@ -55,6 +79,7 @@ fieldset {
   width: 100%;
   border: none;
   padding: 0;
+  margin-left: 0;
 }
 
 form input {
@@ -84,14 +109,7 @@ p {
   margin-left: 8px;
   font-weight: bold;
   text-decoration: underline;
-}
-
-#password {
-  display: block;
-}
-
-#test {
-  position: absolute;
+  color: black;
 }
 
 .password-wrapper {
@@ -116,14 +134,12 @@ p {
   border: 1px inset;
   border-right: none;
 }
-//input {
-//  border-width: 2px;
-//  border-style: inset;
-//  border-color: (rgb(118, 118, 118), rgb(195, 195, 195));
-//  border-image: initial;
-//}
 
-* {
-  box-sizing: border-box;
-  border: none;
+@media all and (max-width: 767px) {
+  .login-card {
+    width: 65%;
+    height: fit-content;
+    margin-top: 70px !important;
+  }
 }
+

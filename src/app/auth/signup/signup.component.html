@@ -1,1 +1,44 @@
-<p>signup works!</p>
+<div class="container">
+  <!--  <p>auth works!</p>-->
+  <div class="login-card">
+    <div class="wrapper">
+      <h4>Create your account</h4>
+      <form action="">
+
+        <fieldset>
+          <label for="">Pseudo</label>
+          <input type="text" placeholder="Enter your pseudo">
+
+          <label for="">Email</label>
+          <input id="email" type="email" placeholder="Enter your Email" />
+
+          <label for="">Password</label>
+          <div class="password-wrapper">
+            <input
+              class="password"
+              [type]="this.passwordShow === false ? 'password' : 'text'"
+              placeholder="Enter your Email" />
+          </div>
+
+            <label for="">Confirm Password</label>
+            <div class="password-wrapper">
+              <input
+                class="password"
+                [type]="this.passwordShow === false ? 'password' : 'text'"
+                placeholder="Enter your Email" />
+            </div>
+
+          <button type="button">Create</button>
+        </fieldset>
+
+
+      </form>
+      <p>Already have an account? <a routerLink="/auth" class="creation-link">Log in</a></p>
+
+      <!--      <div>-->
+      <!--        <fa-icon [icon]="faEnvelope"></fa-icon>-->
+      <!--        <fa-icon [icon]="faEye"></fa-icon>-->
+      <!--      </div>-->
+    </div>
+  </div>
+</div>

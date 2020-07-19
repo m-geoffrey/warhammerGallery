@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faEnvelope, faEye, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -11,7 +11,6 @@ export class AuthComponent implements OnInit {
 
   passwordShow = false;
   faEye = faEye;
-
 
   constructor() { }
 

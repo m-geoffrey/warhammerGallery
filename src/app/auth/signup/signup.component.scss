@@ -1,0 +1,120 @@
+$test: 1px solid red;
+
+* {
+  font-family: 'Lato';
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: url("../../../assets/auth/WHUW_CitizensofShadespire2018.jpg") 75% 25%;
+  filter: grayscale(0.5);
+  background-size: cover;
+  display: flex;
+}
+
+//p {
+//  color: #e5e5e5;
+//  margin-top: 0;
+//}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 35%;
+  //height: 380px;
+  border: 1px solid #c5c5c5;
+  background-color: rgba(#e5e5e5, 0.7);
+  //opacity: 0.5;
+
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  //opacity: 1;
+}
+h4 {
+  padding: 32px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1.1px;
+  font-weight: 500;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-top: 15px;
+}
+form label {
+  letter-spacing: 1px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+
+form input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  letter-spacing: 1px;
+  border: none;
+}
+
+button {
+  margin-top: 15px;
+  background-color: black;
+  color: #e5e5e5;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  width: 100%;
+}
+
+p {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.creation-link {
+  margin-left: 8px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.password {
+  //display: block;
+  border: 1px inset;
+  border-right: none;
+}
+
+.password-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.eye {
+  background: white;
+  height: 42px;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
+  border: 1px inset;
+  border-left: none;
+}
+
+#email {
+  border: 1px inset;
+}
+#password {
+
+}
+
