@@ -15,10 +15,10 @@
       <img src="../../assets/logos/White-Warhammerlogo.png" alt="logo Warhammer"></div>
   </div>
   <div class="nav-links" *ngIf="!hamburger || navMenu">
-    <a href="" class="nav-link">Home</a>
-    <a href="" class="nav-link">Blog</a>
-    <a href="https://google.com" target="_blank" class="nav-link">Contact</a>
-    <a href="" class="nav-link">Shop</a>
+    <a routerLink="" routerLinkActive="active" class="nav-link">Home</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Blog</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Contact</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Connexion</a>
   </div>
   <div class="nav-button" *ngIf="hamburger"
        (click)="toggleNav()"

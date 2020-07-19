@@ -12,6 +12,7 @@ $border-color: #e5e5e5;
   height: 100vh;
   display: flex;
   border-right: 1px solid $border-color;
+  box-sizing: border-box;
   flex-direction: column;
 }
 

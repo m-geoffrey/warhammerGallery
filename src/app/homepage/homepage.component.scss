@@ -1,0 +1,63 @@
+$text-light-gray: #8b8b8b;
+
+.category {
+  //border: 1px solid red;
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.section-card {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  grid-row: none;
+  grid-column-gap: 16px;
+  height: 40vh;
+  max-height: 40vh;
+  width: 100%;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  cursor: pointer;
+}
+
+.section-card-image {
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.img-left {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.img1 {
+  background: url("../../assets/homepage/WHUW_bookOCtexture2018.jpg") 50% 50%;
+  background-size: cover;
+}
+
+.img2 {
+  background: url("../../assets/homepage/AoS_CLG014Red2018-1.jpg")50% 50%;
+  background-size: cover;
+}
+.section-card-text {
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.section-card-text h2 {
+  display: flex;
+  margin: auto;
+  font-size: 32px;
+}
+
+.section-card-text p {
+  display: flex;
+  margin: auto;
+  font-size: 17px;
+  color: $text-light-gray;
+}
