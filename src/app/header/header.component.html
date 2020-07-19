@@ -1,0 +1,32 @@
+<!--<div class="container-navbar">-->
+<!--  <div class="navbar">-->
+<!--    <a href="" class="brand">-->
+<!--      image logo-->
+<!--    </a>-->
+<!--    <div class="nav-button">-->
+<!--      logo toggle nav sidebar?-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="nav-bar">
+  <div class="nav-top">
+    <div class="brand">
+      <img src="../../assets/logos/White-Warhammerlogo.png" alt="logo Warhammer"></div>
+  </div>
+  <div class="nav-links" *ngIf="!hamburger || navMenu">
+    <a routerLink="" routerLinkActive="active" class="nav-link">Home</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Blog</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Contact</a>
+    <a routerLink="/auth" routerLinkActive="active" class="nav-link">Connexion</a>
+  </div>
+  <div class="nav-button" *ngIf="hamburger"
+       (click)="toggleNav()"
+       [ngClass]="{'change': navMenu}">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</div>
+
+

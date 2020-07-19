@@ -1,0 +1,22 @@
+.nav-left-margin {
+  margin-left: 280px;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+@media all and (max-width: 991px) {
+  .nav-left-margin {
+    margin-left: unset;
+  }
+  .page-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../assets/fonts/Lato-Regular.ttf");
+}
+

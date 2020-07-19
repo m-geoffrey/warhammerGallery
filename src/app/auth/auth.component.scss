@@ -1,0 +1,145 @@
+$test: 1px solid red;
+* {
+  font-family: 'Lato';
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background: url("../../assets/auth/WHUW_CitizensofShadespire2018.jpg") 75% 25%;
+  filter: grayscale(0.5);
+  background-size: cover;
+  display: flex;
+}
+
+@media all and (orientation: landscape) and (max-width: 823px) {
+  .container {
+    height: 100%;
+  }
+
+  .login-card {
+   margin-top: 45px !important;
+   margin-bottom: 45px !important;
+  }
+
+  .wrapper h4 {
+    padding: 5px;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 823px) {
+  .container {
+    height: 100vh;
+  }
+
+  .login-card {
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .wrapper h4 {
+    padding: 5px;
+  }
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 35%;
+  border: 1px solid #c5c5c5;
+  background-color: rgba(#e5e5e5, 0.7);
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+h4 {
+  padding: 32px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1.1px;
+  font-weight: 500;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-top: 15px;
+}
+form label {
+  letter-spacing: 1px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+form input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  letter-spacing: 1px;
+  border: none;
+}
+
+button {
+  margin-top: 15px;
+  background-color: black;
+  color: #e5e5e5;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  width: 100%;
+}
+
+p {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.creation-link {
+  margin-left: 8px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.password-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.eye {
+  background: white;
+  height: 42px;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
+  border: 1px inset;
+  border-left: none;
+}
+
+#email {
+  border: 1px inset;
+}
+#password {
+  border: 1px inset;
+  border-right: none;
+}
+
+@media all and (max-width: 767px) {
+  .login-card {
+    width: 65%;
+    height: fit-content;
+    margin-top: 70px !important;
+  }
+}
+
