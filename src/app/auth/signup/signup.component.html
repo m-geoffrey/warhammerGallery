@@ -7,7 +7,7 @@
 
         <fieldset>
           <label for="">Pseudo</label>
-          <input type="text" placeholder="Enter your pseudo">
+          <input type="text" placeholder="Enter your Pseudo">
 
           <label for="">Email</label>
           <input id="email" type="email" placeholder="Enter your Email" />
@@ -16,16 +16,16 @@
           <div class="password-wrapper">
             <input
               class="password"
-              [type]="this.passwordShow === false ? 'password' : 'text'"
               placeholder="Enter your Email" />
+<!--              [type]="this.passwordShow === false ? 'password' : 'text'"-->
           </div>
 
             <label for="">Confirm Password</label>
             <div class="password-wrapper">
               <input
                 class="password"
-                [type]="this.passwordShow === false ? 'password' : 'text'"
                 placeholder="Enter your Email" />
+<!--                [type]="this.passwordShow === false ? 'password' : 'text'"-->
             </div>
 
           <button type="button">Create</button>
@@ -33,7 +33,7 @@
 
 
       </form>
-      <p>Already have an account? <a routerLink="/auth" class="creation-link">Log in</a></p>
+      <p>Already have an account? <a routerLink="/login" class="creation-link">Log in</a></p>
 
       <!--      <div>-->
       <!--        <fa-icon [icon]="faEnvelope"></fa-icon>-->
