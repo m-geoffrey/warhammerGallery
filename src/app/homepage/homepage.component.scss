@@ -6,6 +6,10 @@ $text-light-gray: #8b8b8b;
   width: 90%;
   height: auto;
   margin: auto;
+  border-bottom: 1px solid $text-light-gray;
+}
+.category:last-child {
+  border: none;
 }
 
 .section-card {
@@ -13,8 +17,7 @@ $text-light-gray: #8b8b8b;
   grid-template-columns: 1fr 0.1fr 1fr;
   grid-row: none;
   grid-column-gap: 16px;
-  height: 40vh;
-  max-height: 40vh;
+  min-height: 40vh;
   width: 100%;
   margin-top: 6vh;
   margin-bottom: 3vh;
@@ -51,13 +54,34 @@ $text-light-gray: #8b8b8b;
 
 .section-card-text h2 {
   display: flex;
-  margin: auto;
+  margin: 8px auto;
   font-size: 32px;
+  text-align: center;
+  //margin-bottom: 8px;
 }
 
 .section-card-text p {
   display: flex;
-  margin: auto;
+  margin: 8px;
   font-size: 17px;
   color: $text-light-gray;
+}
+
+@media all and (max-width: 767px) {
+  .category {
+    margin: 25px auto;
+  }
+  .section-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-card-image {
+    height: 300px;
+  }
+  .section-card-text {
+    padding: 25px 0 0;
+  }
+  .section-card-text h2 {
+    font-size: 22px;
+  }
 }
