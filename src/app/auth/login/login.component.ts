@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,5 +21,10 @@ export class LoginComponent implements OnInit {
     console.log('password display function');
     this.passwordShow = ! this.passwordShow;
     console.log ('show password: ' + this.passwordShow);
+  }
+
+  onSubmit(form: NgForm): void {
+    console.log(form.value);
+    form.reset();
   }
 }
