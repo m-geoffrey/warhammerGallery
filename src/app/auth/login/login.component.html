@@ -1,40 +1,38 @@
 <div class="container">
-  <!--  <p>auth works!</p>-->
   <div class="login-card">
     <div class="wrapper">
       <h4>Log in to your account</h4>
-      <form action="">
-
+      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <fieldset>
-          <label for="">Email</label>
-          <input id="email" type="email" placeholder="Enter your Email" />
-
-          <label for="">Password</label>
+          <label for="email">Email</label>
+          <input
+            required
+            id="email"
+            type="email"
+            ngModel
+            name="email"
+            placeholder="Enter your Email" />
+          <label for="password">Password</label>
           <div class="password-wrapper">
             <input
+              required
               id="password"
               [type]="this.passwordShow === false ? 'password' : 'text'"
+              ngModel
+              name="password"
               placeholder="Enter your Email" />
             <span class="eye">
               <fa-icon
                 [icon]="faEye"
                 style="margin: auto 5px"
-                (click)="passwordDisplay()"></fa-icon>
+                (click)="passwordDisplay()">
+              </fa-icon>
             </span>
-
           </div>
-
-          <button type="button">Log In</button>
+          <button type="submit">Log In</button>
         </fieldset>
-
-
       </form>
       <p>Don't have an account? <a routerLink="/sign-up" class="creation-link">Create one</a></p>
-
-      <!--      <div>-->
-      <!--        <fa-icon [icon]="faEnvelope"></fa-icon>-->
-      <!--        <fa-icon [icon]="faEye"></fa-icon>-->
-      <!--      </div>-->
     </div>
   </div>
 </div>
