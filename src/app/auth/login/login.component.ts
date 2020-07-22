@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 

@@ -3,42 +3,50 @@
   <div class="login-card">
     <div class="wrapper">
       <h4>Create your account</h4>
-      <form action="">
-
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <fieldset>
-          <label for="">Pseudo</label>
-          <input type="text" placeholder="Enter your Pseudo">
-
-          <label for="">Email</label>
-          <input id="email" type="email" placeholder="Enter your Email" />
-
-          <label for="">Password</label>
+          <label>Pseudo</label>
+          <input
+            [class.is-invalid]="registerForm.get('pseudo').invalid && registerForm.get('pseudo').touched"
+            required
+            formControlName="pseudo"
+            type="text"
+            placeholder="Enter your Pseudo">
+          <label>Email</label>
+          <input
+            [class.is-invalid]="registerForm.get('email').invalid && registerForm.get('email').touched"
+            required
+            formControlName="email"
+            id="email"
+            type="email"
+            placeholder="Enter your Email" />
+<!--          <div *ngIf="emailInput.invalid">email invalid</div>-->
+          <label>Password</label>
           <div class="password-wrapper">
             <input
+              [class.is-invalid]="registerForm.get('password').invalid && registerForm.get('password').touched"
+              required
+              formControlName="password"
+              type="password"
               class="password"
               placeholder="Enter your Email" />
 <!--              [type]="this.passwordShow === false ? 'password' : 'text'"-->
           </div>
-
-            <label for="">Confirm Password</label>
+            <label>Confirm Password</label>
             <div class="password-wrapper">
               <input
+                [class.is-invalid]="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').touched"
+                required
+                formControlName="confirmPassword"
+                type="password"
                 class="password"
                 placeholder="Enter your Email" />
 <!--                [type]="this.passwordShow === false ? 'password' : 'text'"-->
             </div>
-
-          <button type="button">Create</button>
+          <button type="submit">Create</button>
         </fieldset>
-
-
       </form>
       <p>Already have an account? <a routerLink="/login" class="creation-link">Log in</a></p>
-
-      <!--      <div>-->
-      <!--        <fa-icon [icon]="faEnvelope"></fa-icon>-->
-      <!--        <fa-icon [icon]="faEye"></fa-icon>-->
-      <!--      </div>-->
     </div>
   </div>
 </div>
