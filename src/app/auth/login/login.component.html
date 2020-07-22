@@ -4,15 +4,15 @@
       <h4>Log in to your account</h4>
       <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <fieldset>
-          <label for="email">Email</label>
+          <label>Email</label>
           <input
             required
             id="email"
             type="email"
-            ngModel
+            ngModel [email]="true"
             name="email"
             placeholder="Enter your Email" />
-          <label for="password">Password</label>
+          <label>Password</label>
           <div class="password-wrapper">
             <input
               required
