@@ -2,13 +2,13 @@ const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
 
-// Créer un compte utilisateur
+// User Creation
 exports.createUser = (req, res, next) => {
   bcrypt.hash(req.body.password, 10).then((hash) => {
     const user = new User({
+      pseudo: req.body.pseudo,
       email: req.body.email,
-      password: hash,
-      pseudo: req.body.pseudo
+      password: hash
     });
     user
       .save()
@@ -24,4 +24,34 @@ exports.createUser = (req, res, next) => {
         });
       });
   });
+}
+
+// User Connection
+exports.userLogin = (req, res, next) => {
+  let fetchedUser;
+  User.findOne({ email: req.body.email })
+    .then(user => {
+      if (!user) {
+        return res.status(401).json({
+          message: 'Unknow Email Address'
+        });
+      }
+      fetchedUser = user;
+      return bcrypt.compare(req.body.password, user.password);
+    })
+    .then((result) => {
+      if (!result) {
+        return res.status(401).json({
+          message: 'Invalid login'
+        });
+      }
+      res.status(200).json({
+        userId: fetchedUser._id
+      });
+    })
+    .catch((err) => {
+      res.status(401).json({
+        message: 'Invalid login'
+      });
+    });
 }

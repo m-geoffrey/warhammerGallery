@@ -2,14 +2,14 @@
   <div class="login-card">
     <div class="wrapper">
       <h4>Log in to your account</h4>
-      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <fieldset>
           <label>Email</label>
           <input
             required
             id="email"
             type="email"
-            ngModel [email]="true"
+            formControlName="email"
             name="email"
             placeholder="Enter your Email" />
           <label>Password</label>
@@ -18,7 +18,7 @@
               required
               id="password"
               [type]="this.passwordShow === false ? 'password' : 'text'"
-              ngModel
+              formControlName="password"
               name="password"
               placeholder="Enter your Email" />
             <span class="eye">
