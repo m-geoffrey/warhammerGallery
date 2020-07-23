@@ -3,6 +3,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 
 import { MustMatch } from '../_helpers/must-match.validator';
+import { AuthService } from '../auth.service';
 
 // custom validator to check that two fields match
 
@@ -19,7 +20,10 @@ export class SignupComponent implements OnInit {
 
   get f(): object { return this.registerForm.controls; }
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -47,6 +51,7 @@ export class SignupComponent implements OnInit {
       // console.log(form.value);
       console.log('form valid / submit');
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+      this.authService.createUser(this.registerForm.value.pseudo, this.registerForm.value.email, this.registerForm.value.password);
     }
   }
 
