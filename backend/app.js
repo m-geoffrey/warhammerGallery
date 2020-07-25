@@ -1,6 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
+const cors = require('cors');
+
+// require('dotenv').config();
+const nodemailer = require('nodemailer');
 
 const User = require("./models/user");
 const userRoutes = require('./routes/user');
@@ -41,4 +45,29 @@ app.use("/api/user", userRoutes);
 
 module.exports = app;
 
-// 4sa4FhDEc2wupBGa
+//start nodemailer
+
+//step 1
+// let transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: process.env.EMAIL,
+//     pass: process.env.PASSWORD
+//   }
+// });
+//
+// let mailOptions = {
+//   from: 'moniezgeoffrey59@gmail.com',
+//   to: 'moniez.geoffrey@yahoo.fr',
+//   subject: 'testing and testing',
+//   text: 'IT works'
+// };
+//
+// // step 2
+// transporter.sendMail(mailOptions, function(err, data) {
+//   if (err) {
+//     console.log('Error Occurs', err);
+//   } else {
+//     console.log('Email send');
+//   }
+// })

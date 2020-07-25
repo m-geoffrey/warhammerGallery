@@ -1,5 +1,7 @@
 {
   "env": {
-  "MONGO_ATLAS_PW": "4sa4FhDEc2wupBGa"
+    "MONGO_ATLAS_PW": "4sa4FhDEc2wupBGa",
+    "EMAIL": "moniezgeoffrey59@gmail.com",
+    "PASSWORD": "gladiator59124"
   }
 }
