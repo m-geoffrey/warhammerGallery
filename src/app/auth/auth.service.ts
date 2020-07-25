@@ -43,9 +43,9 @@ export class AuthService {
         this.authStatusListener.next(true);
         AuthService.saveAuthData(this.userId);
         this.router.navigate(['/']);
-      }, error => {
+      }, error => {8
         this.authStatusListener.next(false);
       });
-    console.log('login should be ok & redirect homepage');
+    console.log('login should be ok.. redirect homepage');
   }
 }
