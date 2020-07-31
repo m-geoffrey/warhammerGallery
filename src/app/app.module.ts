@@ -14,6 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { ShadespireComponent } from './shadespire/shadespire.component';
+import { ShadespireCreateComponent } from './shadespire/shadespire-create/shadespire-create.component';
+import { ShadespireListComponent } from './shadespire/shadespire-list/shadespire-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ShadespireComponent,
+    ShadespireCreateComponent,
+    ShadespireListComponent
   ],
   imports: [
     BrowserModule,

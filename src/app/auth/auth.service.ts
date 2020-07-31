@@ -12,6 +12,7 @@ const BACKEND_URL = environment.apiUrl + '/user/';
 @Injectable({providedIn: 'root'})
 export class AuthService {
   private userId: string;
+  private pseudo: string;
   private authStatusListener = new Subject<boolean>();
 
   constructor(
@@ -19,8 +20,9 @@ export class AuthService {
     private router: Router
   ) {}
 
-  private static saveAuthData(userId: string): any {
+  private static saveAuthData(userId: string, pseudo: string): any {
     localStorage.setItem('userId', userId);
+    localStorage.setItem('pseudo', pseudo);
   }
 
   createUser(pseudo: string, email: string, password: string): object {
@@ -36,16 +38,18 @@ export class AuthService {
   login(email: string, password: string): any {
     const authData: AuthData = { email, password };
     this.httpClient
-      .post<{ userId: string }>
+      .post<{ userId: string, pseudo: string }>
       (BACKEND_URL + '/login', authData)
       .subscribe((response) => {
         this.userId = response.userId;
+        this.pseudo = response.pseudo;
         this.authStatusListener.next(true);
-        AuthService.saveAuthData(this.userId);
+        AuthService.saveAuthData(this.userId, this.pseudo);
         this.router.navigate(['/']);
-      }, error => {8
+      }, error => {
         this.authStatusListener.next(false);
       });
     console.log('login should be ok.. redirect homepage');
+    console.log(this.pseudo);
   }
 }

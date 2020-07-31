@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +27,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.navDisplay = false;
+
     if (this.innerWidth <= 991) {
       this.hamburger = true;
     }
