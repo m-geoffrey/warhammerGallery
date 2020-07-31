@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 
@@ -22,7 +22,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private elementRef: ElementRef
   ) { }
 
   ngOnInit(): void {
